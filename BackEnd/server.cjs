@@ -69,7 +69,7 @@ app.post('/api/movies', (req, res)=>{
 
     // adding the new movie onto the end of the array
     movies.push(newMovie);
-    
+    res.send('Movie added!');
 })
 
 
