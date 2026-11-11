@@ -6,9 +6,10 @@ function Read() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    axios.get('https://data-rep-mern-application.github.io/dataserver/movies.json')
+    axios.get('http://localhost:4000/api/movies')
       .then((response) => {
-        setMovies(response.data.myArray);
+        console.log(response.data.movies);
+        setMovies(response.data.movies);
       })
       .catch((error) => {
         console.log(error);
